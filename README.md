@@ -1,7 +1,7 @@
 # 运营管理平台后端
 
 ## 本地安装运行
-
+```
 1. 运行服务端
 npm install
 npm run dev
@@ -10,10 +10,8 @@ npm run dev
 cd TCP/clients  
 node client.js
 ```
-3. 测试
-``` bash
-npm test
-```
+
+
 
 ## 线上生产环境
 
