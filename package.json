@@ -1,0 +1,45 @@
+{
+  "name": "presystem",
+  "version": "0.1.0",
+  "description": "前置系统",
+  "main": "bin/www",
+  "scripts": {
+    "start": "nodemon bin/www",
+    "dev": "nodemon bin/www",
+    "prd": "pm2 start bin/www",
+    "format": "prettier --write \"./{bin,controllers,lib,middleware,migrations,misc,models}/**/*.{js,json,md}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@e.coding.net:funenc/operator.git"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "mysql2": "^1.6.1",
+    "redis": "^2.8.0",
+    "sequelize": "^4.38.0",
+    "sequelize-cli": "^4.0.0",
+    "then-redis": "^2.0.1"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.6",
+    "husky": "^1.0.0-rc.13",
+    "jest": "^23.1.0",
+    "lint-staged": "^7.2.0",
+    "nodemon": "^1.8.1",
+    "prettier": "1.13.7"
+  }
+}
